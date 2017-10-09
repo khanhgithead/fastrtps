@@ -2,7 +2,7 @@
 
 This is a docker build file for eProsima's Fast RTPS implementation.  The java option is included to build the fastrtpsgen application.
 
-See (eProsima Fast RTPS Documentation)[http://eprosima-fast-rtps.readthedocs.io/en/latest/] for use.
+See [eProsima Fast RTPS Documentation](http://eprosima-fast-rtps.readthedocs.io/en/latest/) for use.
 
 # Installation
 
