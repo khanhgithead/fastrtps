@@ -55,7 +55,7 @@ be in the directory `/bin/x64Linux2.6gcc/`.  Change into the directory and run t
 application.
 
 ```bash
-  cd /bin/x64Linux2.6gcc
+  cd bin/x64Linux2.6gcc
   ./HelloWorldPublisherSubscriber publisher
   ./HelloWorldPublisherSubscriber subscriber
 ```
