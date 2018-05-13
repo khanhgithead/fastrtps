@@ -29,7 +29,7 @@ RUN wget https://services.gradle.org/distributions/gradle-4.2-bin.zip && \
 
 ENV PATH=$PATH:/opt/gradle/gradle-4.2/bin
 
-RUN git clone https://github.com/eProsima/Fast-RTPS && \
+RUN git clone --recursive https://github.com/eProsima/Fast-RTPS && \
     mkdir Fast-RTPS/build && cd Fast-RTPS/build \
     && cmake -DTHIRDPARTY=ON .. -DBUILD_JAVA=ON \
     -DPERFORMANCE_TESTS=ON -DSECURITY=ON \
