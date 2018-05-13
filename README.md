@@ -60,8 +60,6 @@ application.
   ./HelloWorldPublisherSubscriber subscriber
 ```
 
-
-
 # MIT License
 
 Copyright (c) 2017 khanh.githead
