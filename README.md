@@ -21,6 +21,47 @@ To run the image type:
 
 This example assume shares your local `~/Desktop` is shared within the docker image as `Desktop`.
 
+# Creating an example application
+
+Once in the Docker image you can create a directory for the example application.  For this example we will use `rtps_example` in the `Desktop` directory.
+
+```bash
+  cd Desktop
+  mkdir rtps_example
+  cd rtps_example
+```
+
+Create an IDL file called `HelloWorld.idl`.
+
+```bash
+  touch HelloWorld.idl
+  vi HelloWorld.idl
+```
+
+Insert the following code into the file:
+
+```bash
+// HelloWorld.idl
+struct HelloWorld
+{
+    string msg;
+};
+```
+
+Generate the example code with `fastrtpsgen -example x64Linux2.6gcc HelloWorld.idl`.
+This will generate all the necessary files for compilation.  Next use make to create
+the binary files:  `make -f makefile_x64Linux2.6gcc`.  All the binary files should
+be in the directory `/bin/x64Linux2.6gcc/`.  Change into the directory and run the
+application.
+
+```bash
+  cd /bin/x64Linux2.6gcc
+  ./HelloWorldPublisherSubscriber publisher
+  ./HelloWorldPublisherSubscriber subscriber
+```
+
+
+
 # MIT License
 
 Copyright (c) 2017 khanh.githead
