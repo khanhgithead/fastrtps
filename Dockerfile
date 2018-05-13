@@ -12,6 +12,8 @@ RUN apt-get update && \
     unzip \
     vim \
     nano && \
+    libasio-dev && \
+    libtinyxml2-dev && \
     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true\
     | debconf-set-selections && \
     apt-get install -y oracle-java8-installer \
@@ -31,8 +33,8 @@ ENV PATH=$PATH:/opt/gradle/gradle-4.2/bin
 
 RUN git clone --recursive https://github.com/eProsima/Fast-RTPS && \
     mkdir Fast-RTPS/build && cd Fast-RTPS/build \
-    && cmake -DTHIRDPARTY=ON .. -DBUILD_JAVA=ON \
-    -DPERFORMANCE_TESTS=ON -DSECURITY=ON \
+    && cmake -DTHIRDPARTY=ON -DBUILD_JAVA=ON \
+    -DPERFORMANCE_TESTS=ON -DSECURITY=ON .. \
     && make \
     && make install
 
