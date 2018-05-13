@@ -11,6 +11,15 @@ To install run the following command:
 ```bash
   docker build -t fastrtps .
 ```
+# Running
+
+To run the image type:
+
+```bash
+  docker run -it -v ~/Desktop:/Desktop fastrtps bash
+```
+
+This example assume shares your local `~/Desktop` is shared within the docker image as `Desktop`.
 
 # MIT License
 
