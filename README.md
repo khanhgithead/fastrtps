@@ -49,11 +49,13 @@ struct HelloWorld
 ```
 
 Generate the example code with:
- `fastrtpsgen -example x64Linux2.6gcc HelloWorld.idl`.
+
+ ```fastrtpsgen -example x64Linux2.6gcc HelloWorld.idl```
 
 This will generate all the necessary files for compilation.  Next use make to create
 the binary files:  
-`make -f makefile_x64Linux2.6gcc`.  
+
+```make -f makefile_x64Linux2.6gcc```  
 
 All the binary files should
 be in the directory `/bin/x64Linux2.6gcc/`.  Change into the directory and run the
