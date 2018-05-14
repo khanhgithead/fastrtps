@@ -19,7 +19,7 @@ To run the image type:
   docker run -it -v ~/Desktop:/Desktop fastrtps bash
 ```
 
-This example assume shares your local `~/Desktop` is shared within the docker image as `Desktop`.
+This example assumes your local `~/Desktop` is shared within the docker image as `Desktop`.
 
 # Creating an example application
 
@@ -48,9 +48,14 @@ struct HelloWorld
 };
 ```
 
-Generate the example code with `fastrtpsgen -example x64Linux2.6gcc HelloWorld.idl`.
+Generate the example code with:
+ `fastrtpsgen -example x64Linux2.6gcc HelloWorld.idl`.
+
 This will generate all the necessary files for compilation.  Next use make to create
-the binary files:  `make -f makefile_x64Linux2.6gcc`.  All the binary files should
+the binary files:  
+`make -f makefile_x64Linux2.6gcc`.  
+
+All the binary files should
 be in the directory `/bin/x64Linux2.6gcc/`.  Change into the directory and run the
 application.
 
