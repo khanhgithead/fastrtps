@@ -69,7 +69,7 @@ application.
 
 # MIT License
 
-Copyright (c) 2017 khanh.githead
+Copyright (c) 2017-2020 khanh.githead
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
